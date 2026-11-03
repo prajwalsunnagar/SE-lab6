@@ -1,0 +1,4 @@
+Branch coverage stage
+Command: python -m coverage run --branch --source=restaurant_bill -m pytest -q BranchCoverageTest_restaurant_bill.py
+Result: 13 passed
+Module coverage: 100% (33 statements, 0 missed, 22 branches, 0 partial)
