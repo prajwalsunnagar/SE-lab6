@@ -1,0 +1,4 @@
+Line coverage stage
+Command: python -m coverage run --source=restaurant_bill -m pytest -q CodeCoverageTest_restaurant_bill.py
+Result: 13 passed
+Module coverage: 100% (33 statements, 0 missed)

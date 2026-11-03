@@ -2,17 +2,24 @@
 
 Lab 6: Code and Branch Coverage
 
-## About
+The module under test totals restaurant bills by seating section, happy hour,
+and party size; splits a bill; and decides how a walk-in party is seated.
 
-A small Python module that totals a restaurant bill by seating section, happy hour and party size, splits it between diners and decides how a walk-in party is seated.
+Run the line coverage suite from this folder:
 
-## Files
+```powershell
+python -m coverage run --source=restaurant_bill -m pytest CodeCoverageTest_restaurant_bill.py
+python -m coverage report -m
+```
 
-| File | Description |
-|------|-------------|
-| `restaurant_bill.py` | The module under test |
-| `test_restaurant_bill.py` | Starter test file |
+Run the branch coverage suite from this folder:
 
-Keep all your Lab 6 work in this `LAB6` folder. Lab 7 will be added to this repo later.
+```powershell
+python -m coverage erase
+python -m coverage run --branch --source=restaurant_bill -m pytest BranchCoverageTest_restaurant_bill.py
+python -m coverage report -m
+```
 
-Refer to the lab handout for instructions.
+Keep Lab 6 work in this folder. The original repository provides `test_restaurant_bill.py` as a starter; these two focused files make the handout's
+separate line-coverage and branch-coverage stages explicit.
+
